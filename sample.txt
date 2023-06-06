@@ -1,0 +1,2 @@
+{{"Fruit", "Litchi"}, {"Tree", "Birch"}, {"Vegetable", "Potato"}}
+cd "c:\Users\91983\Desktop\codes\" ; if ($?) { g++ strange1.cpp -o strange1 } ; if ($?) { .\strange1 }

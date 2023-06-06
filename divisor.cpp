@@ -109,4 +109,71 @@ int main()
     palin(arr,n);
     divisor(arr,n);
     return 0;
+
+}
+
+
+
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        string st,st1;
+        cin>>st;
+        int i,f=0,s=0,l=st.length();
+        if(s==0)
+        {
+            
+                if(l==1)
+                {
+                    if(st[0]!='Y'||st[0]!='e'||st[0]!='s')
+                    {
+                        f=1;
+                    }
+                }
+                else if(l==2)
+                {
+                    if((st[0]=='Y'&&st[1]!='e')||(st[0]=='e'&&st[1]!='s')||(st[0]=='s'&&st[1]!='Y'))
+                    {   
+                        f=1;
+                    }
+                }
+                else
+                {
+                    for(i=0;i<l;i+3)
+                    {
+                        st1=st.substr(i,3);
+                        cout<<st1<<" ";
+                        if(st1.compare("Yes")!=0 && st1.compare("esY")!=0 && st1.compare("sYe")!=0)
+                        {
+                            f=1;
+                            break;
+                        }
+                    }
+                     if(l%3!=0)
+                    {
+                        if(st[0]!=st[l-1])
+                        {
+                            f=1;
+                        }
+                    }
+                }
+            if(f==1)
+        {
+            cout<<"No";
+        }
+        else 
+        {
+            cout<<"Yes";
+        }
+        cout<<"\n";
+        }
+        
+    }
+    return 0;
 }

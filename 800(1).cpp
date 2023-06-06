@@ -2,8 +2,45 @@
 using namespace std;
 int main()
 {
-    string st="1011";
-    int t;
-    t=st[0];
-    cout<<t;
+    long long t;
+    cin>>t;
+    while (t--)
+    {  
+        string st,st1;
+        int i,l,beg=0,end,count=0,temp;
+        cin>>st;
+        l=st.length();
+        end=l-1;
+        if(l==2 && st[0]==st[1])
+        {
+            cout<<st[0]<<"a"<<st[1];
+        }
+        else{
+        while(beg<=end)
+        {
+            if(st[beg]!=st[end])
+            {
+                beg++;
+                count++;
+                st1=st[beg];
+                temp=beg;
+            }
+            else
+            {
+                beg++;
+                end--;
+            }
+        }
+        if(count==1){
+            for(int i=l;i>=temp;i--)
+            {
+                st[i+1]=st[i];
+            }
+            st[i]=st1;
+        }
+        else
+            cout<<"NA";
+        }
+    }
+    return 0;
 }

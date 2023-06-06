@@ -35,6 +35,13 @@
   ],
   "files.associations": {
     "iostream": "cpp",
-    "cmath": "cpp"
-  }
+    "cmath": "cpp",
+    "new": "cpp",
+    "ostream": "cpp",
+    "map": "cpp",
+    "fstream": "cpp",
+    "iosfwd": "cpp"
+  },
+  "C_Cpp_Runner.useAddressSanitizer": false,
+  "C_Cpp_Runner.showCompilationTime": false
 }
