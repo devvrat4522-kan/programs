@@ -2,6 +2,20 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "kismat18",
+      "request": "launch",
+      "mainClass": "kismat18",
+      "projectName": "codes_fbd23401"
+    },
+    {
+      "type": "java",
+      "name": "prac",
+      "request": "launch",
+      "mainClass": "java_programs.prac",
+      "projectName": "codes_fbd23401"
+    },
+    {
       "name": "(gdb) Attach",
       "type": "cppdbg",
       "request": "attach",
@@ -39,6 +53,32 @@
           "ignoreFailures": true
         }
       ]
+    },
+    {
+      "name": "C/C++: cpp.exe build and debug active file",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "C:\\MinGW\\bin\\gdb.exe",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        },
+        {
+          "description": "Set Disassembly Flavor to Intel",
+          "text": "-gdb-set disassembly-flavor intel",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "C/C++: cpp.exe build active file"
     }
   ]
 }

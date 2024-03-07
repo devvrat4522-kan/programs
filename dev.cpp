@@ -2,28 +2,36 @@
 using namespace std;
 int main()
 {
-    int i,a[10],gret,j,least;
-    for(i=0;i<5;i++)
+    int arr[]={7,10,4,3,20,15,3};
+    int n=6;
+    int l=0,r=5;
+    map<int,int>mp;
+    while(l<=r)
     {
-        cin>>a[i];
+        mp.insert({arr[l],1});
+        mp.insert({arr[r],1});
+        l++;
+        r--;
     }
-    cout<<endl;
-    for(i=0;i<5;i++)
+    for(auto it=mp.begin();it!=mp.end();it++)
     {
-        //gret=a[0];
-        least=a[i];
-        for(j=i+1;j<5;j++)
-        {
-            //gret=max(a[j],gret);
-            least=min(a[j],least);
-        }
-        int temp=a[i];
-        a[i]=least;
-        least=temp;
+        cout<<it->first<<" "<<it->second<<endl;
     }
-        for(i=0;i<5;i++)
+    map<int,int>mp;
+        int i=0,j=r;
+        while(i<=j)
         {
-            cout<<a[i]<<" ";
+            mp.insert({arr[i],1});
+            mp.insert({arr[j],1});
+            i++;
+            j--;
         }
-        return 0;
+        for(auto it=mp.begin();it!=mp.end();it++)
+        {
+            if(k==1)
+            {
+                return it->first;
+            }
+            k--;
+        }
 }
