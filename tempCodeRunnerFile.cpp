@@ -1,2 +1,1 @@
-t i=0;i<6;i++)
-        co
+sort(vc.begin(),vc.end(),cmp);
